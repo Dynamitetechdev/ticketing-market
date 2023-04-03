@@ -1,0 +1,40 @@
+.header {
+  position: absolute;
+  width: 100%;
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 3em;
+
+    ul {
+      display: flex;
+      li {
+        margin: 10px;
+      }
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      background: #a8d201;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .connectBtn {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      right: 0;
+      top: 5em;
+      height: 100px;
+      .firstBtn {
+        margin: 20px;
+      }
+    }
+    .close {
+      display: none;
+    }
+  }
+}

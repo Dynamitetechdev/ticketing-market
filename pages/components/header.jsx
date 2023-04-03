@@ -1,25 +1,45 @@
 import Link from "next/link";
 import { Web3Button, Web3NetworkSwitch } from "@web3modal/react";
+import { useState } from "react";
+import { Bars2Icon } from "@heroicons/react/24/solid";
 const Header = () => {
+  const [open, setOpen] = useState(false);
   return (
     <div className="header">
-      <nav className="flex absolute justify-start content-center flex-wrap items-center gap-0.5 border-b p-6 ">
-        <p className="text-4xl font-bold ">Sfn Market</p>
-        <div className="flex mt-4">
-          <Link legacyBehavior href="/">
-            <a className=" mr-4 text-black-500">Home</a>
-          </Link>
-          <Link legacyBehavior href="/createNft">
-            <a className="mr-6 text-black-500">Create NFT</a>
-          </Link>
-          <Link legacyBehavior href="/myNfts">
-            <a className="mr-6 text-black-500">My NFTs</a>
-          </Link>
+      <nav className="navigation">
+        <h1 className="font-bold">Sfn Market</h1>
+        <div className="">
+          <ul>
+            <li>
+              <Link legacyBehavior href="/">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link legacyBehavior href="/createNft">
+                Create NFT
+              </Link>
+            </li>
+            <li>
+              <Link legacyBehavior href="/myNfts">
+                My NFTs
+              </Link>
+            </li>
+          </ul>
         </div>
-        <div className="flex gap-0.5 m-auto mt-4 text-white rounded p-4">
-          <Web3Button icon="show" label="Connect Wallet" balance="hide" />
-          <Web3NetworkSwitch />
+        <div onClick={() => setOpen(!open)} className="button">
+          <button>Connect Wallet</button>
         </div>
+        <div className={open ? "connectBtn" : "connectBtn close"}>
+          <Web3Button
+            icon="show"
+            label="Connect Wallet"
+            balance="hide"
+            className="firstBtn"
+          />
+          <Web3NetworkSwitch className="secondBtn" />
+        </div>
+        <Bars2Icon className="mobile-menu" onClick={handleMenuClick} />
       </nav>
     </div>
   );
