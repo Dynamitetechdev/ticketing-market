@@ -6,7 +6,7 @@ import {
 } from "@web3modal/ethereum";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { polygonMumbai } from "wagmi/chains";
-import Header from "./header";
+import Header from "./UI/header";
 
 const Layout = ({ children }) => {
   // 1. Get projectID at https://cloud.walletconnect.com

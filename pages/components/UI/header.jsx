@@ -4,11 +4,15 @@ import { useState } from "react";
 import { Bars2Icon } from "@heroicons/react/24/solid";
 const Header = () => {
   const [open, setOpen] = useState(false);
-  const handleMenuClick = () => {};
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <div className="header">
-      <nav className="navigation">
-        <h1 className="font-bold">Sfn Market</h1>
+      <h1 className="font-bold">Sfn Market</h1>
+      <nav className={menuOpen ? "navigation navigation-open" : "navigation"}>
         <div className="">
           <ul>
             <li>
@@ -28,20 +32,19 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div onClick={() => setOpen(!open)} className="button">
+        <div onClick={() => setOpen(!open)} className="button desktop">
           <button>Connect Wallet</button>
         </div>
         <div className={open ? "connectBtn" : "connectBtn close"}>
-          <Web3Button
-            icon="show"
-            label="Connect Wallet"
-            balance="hide"
-            className="firstBtn"
-          />
-          <Web3NetworkSwitch className="secondBtn" />
+          <div className="firstBtn">
+            <Web3Button icon="show" label="Connect Wallet" balance="hide" />
+          </div>
+          <div className="secondBtn">
+            <Web3NetworkSwitch />
+          </div>
         </div>
-        <Bars2Icon className="mobile-menu" onClick={handleMenuClick} />
       </nav>
+      <Bars2Icon className="mobile-menu" onClick={handleMenuClick} />
     </div>
   );
 };
