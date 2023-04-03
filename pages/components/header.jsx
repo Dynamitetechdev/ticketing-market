@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Bars2Icon } from "@heroicons/react/24/solid";
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const handleMenuClick = () => {};
   return (
     <div className="header">
       <nav className="navigation">

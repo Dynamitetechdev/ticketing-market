@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.17",
     "@material-tailwind/react": "^1.4.2",
     "@next/font": "13.2.3",
     "@nomiclabs/hardhat-waffle": "^2.0.5",
