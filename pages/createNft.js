@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { create as ipfsHttpClient } from "ipfs-http-client";
 
-import sfnMarket from "../pages/components/sfnMarket.json";
+import sfnMarket from "./sfnMarket.json";
 
 const projectId = "2MyNroGl6iLE7zAs4P4RNLzSAES";
 const projectSecret = "72901dfa73bf4a41fe20077f44f2aa0b";
