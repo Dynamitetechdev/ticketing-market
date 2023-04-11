@@ -13,7 +13,7 @@ import Loading from "react-loading";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import sfnMarket from "../pages/components/sfnMarket.json";
+import sfnMarket from "./sfnMarket.json";
 
 const _tokenId = () => {
   const [imageUrl, setImageUrl] = useState("");

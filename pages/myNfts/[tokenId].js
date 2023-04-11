@@ -11,7 +11,8 @@ import Link from "next/link";
 import Loading from "react-loading";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import sfnMarket from "../components/sfnMarket.json";
+
+import sfnMarket from "../sfnMarket.json";
 
 const tokenIdDetails = () => {
   const [imageUrl, setImageUrl] = useState("");
