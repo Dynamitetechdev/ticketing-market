@@ -14,7 +14,10 @@ import { polygonMumbai } from "wagmi/chains";
 
 const App = ({ Component, pageProps }) => {
   // 1. Get projectID at https://cloud.walletconnect.com
-  const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
+  // if (!process.env.NEXT_PUBLIC_PROJECT_ID) {
+  //   throw new Error("You need to provide NEXT_PUBLIC_PROJECT_ID env variable");
+  // }
+  const projectId = "3e37bde473a0c1506472373088316159";
 
   // 2. Configure wagmi client
   const chains = [polygonMumbai];
